@@ -1,39 +1,45 @@
-var dog
-
-
 
 function setup() {
-  createCanvas(1000,400);
-  dog=createSprite(10,10,25,32)
+  createCanvas(600,600);
+  var player=createSprite=(250,250,50,50)
+   player.shapeColor="orange"
+ 
+  
 }
 
-function draw() 
-{
-  background("blue");
+function draw() {
 
-  if(keyDown("right")){
-    dog.x=dog.x+10
+ background('black')
 
+
+
+  if(keyIsDown(DOWN_ARROW)){
+    background('blue')
   }
+ 
+ if(keyIsDown(UP_ARROW)){
+ background('green')
 
+
+ }
+ 
+
+ if(keyIsDown(RIGHT_ARROW)){
+   background('yellow')
+
+
+
+ }
+
+ if(keyIsDown(LEFT_ARROW)){
+   background('red')
+
+
+
+ }
   
-  if(keyDown("left")){
-    dog.x=dog.x-10
 
-  }
-
-  if(keyDown("up")){
-    dog.y=dog.y-10
-
-  }
-
-  if(keyDown("down")){
-    dog.y=dog.y+10
-
-  }
-
-  drawSprites()
-
+drawSprites()
 
 }
 
